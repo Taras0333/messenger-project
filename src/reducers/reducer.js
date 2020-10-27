@@ -11,7 +11,7 @@ const initialStore = {
     contacts:[
       {
             id: 0,
-            photo: `../${Alice}`,
+            photo: Alice,
             name: "Alice Freeman",
             messages: [
                 {
@@ -32,7 +32,7 @@ const initialStore = {
         },
         {
             id: 1,
-            photo: `../${Josefina}`,
+            photo: Josefina,
             name: "Josefina",
             messages: [
                 {
@@ -55,7 +55,7 @@ const initialStore = {
         },
         {
             id: 2,
-            photo: `../${Velazquez}`,
+            photo: Velazquez,
             name: "Velazquez",
             messages: [
                 {
@@ -75,7 +75,7 @@ const initialStore = {
         },
         {
             id: 3,
-            photo: `../${Barrera}`,
+            photo: Barrera,
             name: "Barrera",
             messages: [
                 {
@@ -95,7 +95,7 @@ const initialStore = {
         },
         {
             id: 4,
-            photo: `../${Jon}`,
+            photo: Jon,
             name: "Jon Hook",
             messages: [
                 {
@@ -119,7 +119,7 @@ const initialStore = {
         },
         {
             id: 5,
-            photo: `../${Nick}`,
+            photo: Nick,
             name: "Nick",
             messages: [
                 {
@@ -140,7 +140,7 @@ const initialStore = {
     
     ],
     myAccount:{
-        photo: `../${Anonymous}`,
+        photo: Anonymous,
     },
     findPerson: "",
     whichContact: 1,
