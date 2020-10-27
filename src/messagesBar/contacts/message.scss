@@ -1,0 +1,63 @@
+@import "../../colors.scss";
+
+.messages-container {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid $message-gray;
+}
+.messages-window {
+  width: 100%;
+  height: 78%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+}
+
+.messages-header {
+  width: 100%;
+  height: 10%;
+  background-color: $dark-gray;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+.user-name {
+  font-size: 22px;
+  margin-left: 20px;
+}
+.each-message-wrapper {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+}
+.img-wrapper.img-wrapper-message {
+  width: 30px;
+  height: 37px;
+  margin-right: 8px;
+}
+.avatar.avatar-message {
+  width: 30px;
+  height: 30px;
+}
+.check.check-message {
+  width: 10px;
+  height: 10px;
+}
+.each-message {
+  min-height: 30px;
+  width: fit-content;
+  max-width: 400px;
+  font-size: 13px;
+  border-radius: 14px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  background-color: $message-blue;
+  color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

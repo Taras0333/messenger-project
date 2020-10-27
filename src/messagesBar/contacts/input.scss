@@ -1,0 +1,42 @@
+@import "../../colors.scss";
+
+.input-container {
+  width: 100%;
+  height: 12%;
+  background-color: $dark-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+}
+.input-wrapper {
+  background-color: $white;
+  width: 85%;
+  height: 40px;
+  border: 1px solid $message-gray;
+  border-radius: 18px;
+  box-sizing: border-box;
+  display: flex;
+}
+.message-input {
+  width: 92%;
+  border-radius: 18px;
+  padding: 0px 20px;
+  outline: none;
+  border: none;
+}
+.sent-btn {
+  width: 8%;
+  border-radius: 18px;
+  outline: none;
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../images/sent.svg);
+  background-position: 64%;
+  background-size: 21px;
+  background-repeat: no-repeat;
+}

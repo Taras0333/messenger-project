@@ -1,0 +1,81 @@
+import React, {Component} from 'react';
+import "./message.scss";
+import {Header} from "./header";
+import {Message} from "./message";
+import {Input} from "./input";
+import {connect} from "react-redux";
+import {save} from "../../actions/action";
+import {saveResponse} from "../../actions/action";
+import axios from 'axios';
+
+const mapState = (state) => {
+    return state;
+  }
+  const mapDispatch = {
+    save,
+    saveResponse,
+    
+}
+
+class MessagesFunc extends Component{
+    state={
+        newMessage: '',
+    }
+    getMessage = (e) => {
+        this.setState({
+            newMessage: e.target.value
+        })
+        console.log(this.props.contacts[0])
+    }
+
+    saveMessage = () =>{
+        this.props.save(this.state.newMessage, this.props.whichContact);
+        this.setState({
+            newMessage: '',
+            whichContact: this.props.whichContact,
+        });
+        this.getResponse();
+    }
+    getResponse = () =>{
+        let response = "";
+        axios.get(`https://api.chucknorris.io/jokes/random`)
+        .then((res) => {
+            response = res.data.value;
+        }).catch((err) => {
+            console.log(err);
+        })
+        console.log(response);
+        setTimeout(() => {
+            this.props.saveResponse(response, this.state.whichContact);
+          }, 10000);
+       
+    }
+
+    
+
+    render(){
+        return(
+            <div className="messages-container">
+             
+            <Header name={this.props.contacts[this.props.whichContact].name} photo={this.props.contacts[this.props.whichContact].photo}/>
+            <div className="messages-window">
+                {this.props.contacts[this.props.whichContact].messages.map((el) =>{
+                    if(el.from === "Me"){
+                        return(
+                            <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} isPhoto={false} />
+                        )
+                    }
+                    return(
+                        <Message message={el.msg}  photo={this.props.contacts[this.props.whichContact].photo} isPhoto={true}/>
+                    )
+                })}
+                
+            </div>
+            <Input getMessage={this.getMessage} saveMessage={this.saveMessage} value={this.state.newMessage}/>
+            
+           </div>
+           
+        )
+    }
+}
+export const Messages = connect(mapState, mapDispatch)(MessagesFunc); 
