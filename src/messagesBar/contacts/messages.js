@@ -64,11 +64,11 @@ class MessagesFunc extends Component{
                 {this.props.contacts[this.props.whichContact].messages.map((el) =>{
                     if(el.from === "Me"){
                         return(
-                            <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} isPhoto={false} date={el.date.toDateString()}/>
+                            <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} isPhoto={false} date={new Date(el.date).toDateString()}/>
                         )
                     }
                     return(
-                        <Message message={el.msg}  photo={this.props.contacts[this.props.whichContact].photo} isPhoto={true} date={el.date.toDateString()}/>
+                        <Message message={el.msg}  photo={this.props.contacts[this.props.whichContact].photo} isPhoto={true} date={new Date(el.date).toDateString()}/>
                     )
                 })}
                 

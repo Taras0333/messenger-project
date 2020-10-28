@@ -30,7 +30,7 @@ const mapState = (state) => {
             {this.props.contacts.map((el, i) =>{
               if( el.name.toLowerCase().includes(this.props.findPerson.toLowerCase())){
                 return(
-                  <Contact photo={el.photo} name={el.name} date={el.messages.slice(-1)[0].date.toDateString()} message={el.messages.slice(-1)[0].msg}  choose={(() => this.props.getContact(i))} />
+                  <Contact photo={el.photo} name={el.name} date={new Date(el.messages.slice(-1)[0].date).toDateString()} message={el.messages.slice(-1)[0].msg}  choose={(() => this.props.getContact(i))} />
               );
               }
               })}

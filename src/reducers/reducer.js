@@ -17,7 +17,7 @@ const initialStore = {
                 {
                     from: "Friend",
                     msg: "I need you halp, quick, sent me the docs)))!",
-                    date: new Date(2020, 9, 14, 13, 32, 44, 0)
+                    date: new Date(2020, 9, 14, 13, 32, 44, 0),
                 },
                 {
                     from: "Me",
