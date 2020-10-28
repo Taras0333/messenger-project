@@ -10,16 +10,18 @@ export const search = (input) => ({
     id: id,
     
   })
-    export const save = (msg, whichContact, change) => ({
+    export const save = (msg, whichContact, date) => ({
       type: "SAVE_MESSAGE",
       message: msg,
       which: whichContact,
-      change: change,
+      date: date,
     })
-    export const saveResponse = (msg, whichContact, change) => ({
+    export const saveResponse = (msg, whichContact, date) => ({
       type: "SAVE_RESPONSE",
       message: msg,
       which: whichContact,
-      change: change,
+      date: date,
     })
+    
+   
     

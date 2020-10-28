@@ -53,4 +53,11 @@
 .date-wrapper {
   width: 30%;
   height: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.date {
+  font-size: 10px;
+  color: $message-gray;
 }

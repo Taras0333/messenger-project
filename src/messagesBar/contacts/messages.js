@@ -21,20 +21,23 @@ class MessagesFunc extends Component{
     state={
         newMessage: '',
     }
+        
+    
     getMessage = (e) => {
         this.setState({
             newMessage: e.target.value
         })
-        console.log(this.props.contacts[0])
+        
     }
 
     saveMessage = () =>{
-        this.props.save(this.state.newMessage, this.props.whichContact);
+        this.props.save(this.state.newMessage, this.props.whichContact, new Date());
         this.setState({
             newMessage: '',
             whichContact: this.props.whichContact,
         });
         this.getResponse();
+        
     }
     getResponse = () =>{
         let response = "";
@@ -44,13 +47,12 @@ class MessagesFunc extends Component{
         }).catch((err) => {
             console.log(err);
         })
-        console.log(response);
         setTimeout(() => {
-            this.props.saveResponse(response, this.state.whichContact);
+            this.props.saveResponse(response, this.state.whichContact, new Date());
           }, 10000);
        
     }
-
+   
     
 
     render(){

@@ -13,7 +13,9 @@ export const Contact = (props)=> {
                 <span className="name">{props.name}</span>
                 <span className="message">{props.message}</span>
             </div>
-            <div className="date-wrapper"></div>
+            <div className="date-wrapper">
+    <span className="date">{props.date}</span>
+            </div>
         </div>
     )
 }
