@@ -59,16 +59,34 @@ class MessagesFunc extends Component{
         return(
             <div className="messages-container">
              
-            <Header name={this.props.contacts[this.props.whichContact].name} photo={this.props.contacts[this.props.whichContact].photo}/>
+            <Header name={this.props.contacts.find((el) => {
+                    if(el.id === this.props.whichContact){
+                        return el.name;
+                    }
+                }).name} photo={this.props.contacts.find((el) => {
+                    if(el.id === this.props.whichContact){
+                        return el.name;
+                    }
+                }).photo}/>
             <div className="messages-window">
-                {this.props.contacts[this.props.whichContact].messages.map((el) =>{
+                {this.props.contacts.find((el) => {
+                    if(el.id === this.props.whichContact){
+                        console.log("messagesFind", el);
+                        return el;
+                    }
+                }).messages.map((el) =>{
+                    console.log(el);
                     if(el.from === "Me"){
                         return(
                             <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} isPhoto={false} date={new Date(el.date).toDateString()}/>
                         )
                     }
                     return(
-                        <Message message={el.msg}  photo={this.props.contacts[this.props.whichContact].photo} isPhoto={true} date={new Date(el.date).toDateString()}/>
+                        <Message message={el.msg}  photo={this.props.contacts.find((el) => {
+                            if(el.id === this.props.whichContact){
+                                return el.name;
+                            }
+                        }).photo} isPhoto={true} date={new Date(el.date).toDateString()}/>
                     )
                 })}
                 

@@ -10,7 +10,7 @@ import Nick from "../images/nick.jpeg";
 const initialStore = {
     contacts:[
       {
-            id: 0,
+            id: 5,
             photo: Alice,
             name: "Alice Freeman",
             messages: [
@@ -34,7 +34,7 @@ const initialStore = {
 
         },
         {
-            id: 1,
+            id: 4,
             photo: Josefina,
             name: "Josefina",
             messages: [
@@ -61,7 +61,7 @@ const initialStore = {
             ],
         },
         {
-            id: 2,
+            id: 3,
             photo: Velazquez,
             name: "Velazquez",
             messages: [
@@ -84,7 +84,7 @@ const initialStore = {
             ],
         },
         {
-            id: 3,
+            id: 2,
             photo: Barrera,
             name: "Barrera",
             messages: [
@@ -107,7 +107,7 @@ const initialStore = {
             ],
         },
         {
-            id: 4,
+            id: 1,
             photo: Jon,
             name: "Jon Hook",
             messages: [
@@ -135,7 +135,7 @@ const initialStore = {
             ],
         },
         {
-            id: 5,
+            id: 0,
             photo: Nick,
             name: "Nick",
             messages: [
@@ -195,11 +195,17 @@ switch(action.type){
          ],
        
     }
-    storeCopy.contacts[action.which].messages.push({
-        from: "Me",
-        msg: action.message,
-        date: action.date,
+    storeCopy.contacts.map((el) => {
+        if(el.id === action.which){
+            console.log("reducerFind", el);
+            el.messages.push({
+                from: "Me",
+                msg: action.message,
+                date: action.date,
+            })
+        }
     })
+    
       return{
           ...storeCopy,
       }
@@ -213,11 +219,16 @@ switch(action.type){
           ],
         
      }
-     storeCopy.contacts[action.which].messages.push({
-         from: "Friend",
-         msg: action.message,
-         date: action.date,
-     })
+     storeCopy.contacts.map((el) => {
+        if(el.id === action.which){
+            el.messages.push({
+                from: "Friend",
+                msg: action.message,
+                date: action.date,
+            })
+        }
+    })
+    
        return{
            ...storeCopy,
        }
