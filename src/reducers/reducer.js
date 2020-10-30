@@ -29,9 +29,7 @@ const initialStore = {
                     msg: "You are the worst!",
                     date: new Date(2020, 9, 15, 12, 12, 59, 0),
                 }
-                
             ],
-
         },
         {
             id: 4,
@@ -80,7 +78,6 @@ const initialStore = {
                     msg: "Quickly come to the meeting room 1B, we have a big server issue",
                     date: new Date(2020, 9, 17, 9, 51, 20, 0),
                 }
-                
             ],
         },
         {
@@ -103,7 +100,6 @@ const initialStore = {
                     msg: "Damn good bro, can`t wait the weekend...",
                     date: new Date(2020, 9, 18, 11, 45, 50, 0),
                 }
-                
             ],
         },
         {
@@ -131,7 +127,6 @@ const initialStore = {
                     msg: "Maybe he know, what he`s doing",
                     date: new Date(2020, 9, 19, 17, 30, 2, 0),
                 }
-                
             ],
         },
         {
@@ -154,7 +149,6 @@ const initialStore = {
                     msg: "Have you already bought a new phone? And by the way, nice jacket)",
                     date: new Date(2020, 9, 20, 20, 5, 5, 0),
                 }
-                
             ],
         }
     
@@ -177,14 +171,12 @@ switch(action.type){
         return{
             ...store,
             findPerson: action.input
-           
         }
     }
     case "GET_ID": {
         return{
             ...store,
             whichContact: action.id
-           
         }
     }
     case "SAVE_MESSAGE": {
@@ -193,7 +185,6 @@ switch(action.type){
            contacts:[
            ...store.contacts,
          ],
-       
     }
     storeCopy.contacts.map((el) => {
         if(el.id === action.which){
@@ -204,11 +195,10 @@ switch(action.type){
             })
         }
     })
-    
+
       return{
           ...storeCopy,
       }
-         
     }
     case "SAVE_RESPONSE": {
         let storeCopy = {
@@ -216,7 +206,6 @@ switch(action.type){
             contacts:[
             ...store.contacts,
           ],
-        
      }
      storeCopy.contacts.map((el) => {
         if(el.id === action.which){
@@ -230,8 +219,7 @@ switch(action.type){
     
        return{
            ...storeCopy,
-       }
-          
+       }  
      }
     default:{
         return store

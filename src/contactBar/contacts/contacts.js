@@ -13,12 +13,6 @@ const mapState = (state) => {
 }
  class ContactsFunc extends Component{
 
-    state={
-      key: "",
-    }
-
-
-
     render(){
         return(
         <div className="contact-container">
@@ -29,7 +23,7 @@ const mapState = (state) => {
             {this.props.contacts.sort((a, b) => b.messages.slice(-1)[0].date - a.messages.slice(-1)[0].date).map((el, i) =>{
               if( el.name.toLowerCase().includes(this.props.findPerson.toLowerCase())){
                 return(
-                  <Contact photo={el.photo} name={el.name} date={new Date(el.messages.slice(-1)[0].date).toDateString()} message={el.messages.slice(-1)[0].msg}  choose={(() => this.props.getContact(el.id))} />
+                  <Contact photo={el.photo} name={el.name} date={el.messages.slice(-1)[0].date.toDateString()} message={el.messages.slice(-1)[0].msg}  choose={(() => this.props.getContact(el.id))} />
               );
               }
               })}

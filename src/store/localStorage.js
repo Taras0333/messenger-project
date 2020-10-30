@@ -6,29 +6,13 @@
             return undefined;
           }
           let parsedStore = JSON.parse(serializedState);
+          for(let i = 0; i < parsedStore.contacts.length; i++){
+            parsedStore.contacts[i].messages.map((el) => {
+              return el.date = new Date(el.date)
+             });
+          }
           
-        
-         parsedStore.contacts[0].messages.map((el) => {
-          return el.date = new Date(el.date)
-         });
-         parsedStore.contacts[1].messages.map((el) => {
-          return el.date = new Date(el.date)
-         });
-         parsedStore.contacts[2].messages.map((el) => {
-          return el.date = new Date(el.date)
-         });
-         parsedStore.contacts[3].messages.map((el) => {
-          return el.date = new Date(el.date)
-         });
-         parsedStore.contacts[4].messages.map((el) => {
-          return el.date = new Date(el.date)
-         });
-         parsedStore.contacts[5].messages.map((el) => {
-          return el.date = new Date(el.date)
-         });
-
           return parsedStore;
-          
         } catch (err) {
           return undefined;
         }

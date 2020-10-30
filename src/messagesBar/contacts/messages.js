@@ -14,20 +14,17 @@ const mapState = (state) => {
   const mapDispatch = {
     save,
     saveResponse,
-    
 }
 
 class MessagesFunc extends Component{
     state={
         newMessage: '',
-    }
-        
+    } 
     
     getMessage = (e) => {
         this.setState({
             newMessage: e.target.value
         })
-        
     }
 
     saveMessage = () =>{
@@ -37,8 +34,8 @@ class MessagesFunc extends Component{
             whichContact: this.props.whichContact,
         });
         this.getResponse();
-        
     }
+
     getResponse = () =>{
         let response = "";
         axios.get(`https://api.chucknorris.io/jokes/random`)
@@ -50,16 +47,12 @@ class MessagesFunc extends Component{
         setTimeout(() => {
             this.props.saveResponse(response, this.state.whichContact, new Date());
           }, 10000);
-       
     }
-   
-    
 
     render(){
         return(
             <div className="messages-container">
-             
-            <Header name={this.props.contacts.find((el) => {
+                <Header  name={this.props.contacts.find((el) => {
                     if(el.id === this.props.whichContact){
                         return el.name;
                     }
@@ -67,7 +60,7 @@ class MessagesFunc extends Component{
                     if(el.id === this.props.whichContact){
                         return el.name;
                     }
-                }).photo}/>
+                }).photo} />
             <div className="messages-window">
                 {this.props.contacts.find((el) => {
                     if(el.id === this.props.whichContact){
@@ -87,12 +80,9 @@ class MessagesFunc extends Component{
                         }).photo} isPhoto={true} date={new Date(el.date).toDateString()}/>
                     )
                 })}
-                
             </div>
             <Input getMessage={this.getMessage} saveMessage={this.saveMessage} value={this.state.newMessage}/>
-            
            </div>
-           
         )
     }
 }

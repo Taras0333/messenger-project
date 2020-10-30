@@ -38,11 +38,12 @@
 }
 .each-message-content {
   display: flex;
+  align-items: center;
   min-height: 30px;
 }
 .img-wrapper.img-wrapper-message {
   width: 30px;
-  height: 37px;
+  height: 30px;
   margin-right: 8px;
 }
 .avatar.avatar-message {
