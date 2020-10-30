@@ -49,12 +49,12 @@ const initialStore = {
                 {
                     from: "Me",
                     msg: "Will be their as soon as posible.",
-                    date: new Date(2020, 9, 14, 10, 3, 58, 0),
+                    date: new Date(2020, 9, 14, 10, 13, 58, 0),
                 },
                 {
                     from: "Frined",
                     msg: "We are losing money! Quick!",
-                    date: new Date(2020, 9, 16, 12, 7, 32, 0),
+                    date: new Date(2020, 9, 16, 12, 47, 32, 0),
                 }
             ],
         },
@@ -71,7 +71,7 @@ const initialStore = {
                 {
                     from: "Me",
                     msg: "Can you tell me once more, where is it?)))",
-                    date: new Date(2020, 9, 16, 8, 2, 40, 0),
+                    date: new Date(2020, 9, 16, 8, 12, 40, 0),
                 },
                 {
                     from: "Frined",
@@ -88,7 +88,7 @@ const initialStore = {
                 {
                     from: "Friend",
                     msg: "Hi)",
-                    date: new Date(2020, 9, 17, 11, 9, 33, 0),
+                    date: new Date(2020, 9, 17, 11, 39, 33, 0),
                 },
                 {
                     from: "Me",
@@ -115,7 +115,7 @@ const initialStore = {
                 {
                     from: "Me",
                     msg: "AHHHH??? Is it posible?",
-                    date: new Date(2020, 9, 17, 15, 5, 34, 0),
+                    date: new Date(2020, 9, 17, 15, 25, 34, 0),
                 },
                 {
                     from: "Frined",
@@ -147,7 +147,7 @@ const initialStore = {
                 {
                     from: "Frined",
                     msg: "Have you already bought a new phone? And by the way, nice jacket)",
-                    date: new Date(2020, 9, 20, 20, 5, 5, 0),
+                    date: new Date(2020, 9, 20, 20, 15, 5, 0),
                 }
             ],
         }
