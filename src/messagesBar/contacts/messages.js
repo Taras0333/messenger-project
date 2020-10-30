@@ -71,11 +71,9 @@ class MessagesFunc extends Component{
             <div className="messages-window">
                 {this.props.contacts.find((el) => {
                     if(el.id === this.props.whichContact){
-                        console.log("messagesFind", el);
                         return el;
                     }
                 }).messages.map((el) =>{
-                    console.log(el);
                     if(el.from === "Me"){
                         return(
                             <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} isPhoto={false} date={new Date(el.date).toDateString()}/>

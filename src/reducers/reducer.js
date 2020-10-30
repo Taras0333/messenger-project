@@ -197,7 +197,6 @@ switch(action.type){
     }
     storeCopy.contacts.map((el) => {
         if(el.id === action.which){
-            console.log("reducerFind", el);
             el.messages.push({
                 from: "Me",
                 msg: action.message,

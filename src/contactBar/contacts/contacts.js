@@ -20,7 +20,6 @@ const mapState = (state) => {
 
 
     render(){
-      
         return(
         <div className="contact-container">
          <div className="contact-top">
