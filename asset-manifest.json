@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/messenger-project/static/css/main.8f2dfacd.chunk.css",
-    "main.js": "/messenger-project/static/js/main.db02f9fc.chunk.js",
-    "main.js.map": "/messenger-project/static/js/main.db02f9fc.chunk.js.map",
+    "main.js": "/messenger-project/static/js/main.c231b303.chunk.js",
+    "main.js.map": "/messenger-project/static/js/main.c231b303.chunk.js.map",
     "runtime-main.js": "/messenger-project/static/js/runtime-main.9691cfda.js",
     "runtime-main.js.map": "/messenger-project/static/js/runtime-main.9691cfda.js.map",
     "static/js/2.9d0328ba.chunk.js": "/messenger-project/static/js/2.9d0328ba.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.9691cfda.js",
     "static/js/2.9d0328ba.chunk.js",
     "static/css/main.8f2dfacd.chunk.css",
-    "static/js/main.db02f9fc.chunk.js"
+    "static/js/main.c231b303.chunk.js"
   ]
 }
