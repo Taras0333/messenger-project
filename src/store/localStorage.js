@@ -11,7 +11,7 @@
               return el.date = new Date(el.date)
              });
           }
-          
+
           return parsedStore;
         } catch (err) {
           return undefined;
@@ -22,6 +22,5 @@
           const serializedState = JSON.stringify(state);
           localStorage.setItem('state', serializedState);
         } catch {
-          // ignore write errors
         }
       };

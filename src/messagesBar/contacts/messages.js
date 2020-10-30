@@ -61,12 +61,12 @@ class MessagesFunc extends Component{
                         return el.name;
                     }
                 }).photo} />
-            <div className="messages-window">
-                {this.props.contacts.find((el) => {
-                    if(el.id === this.props.whichContact){
-                        return el;
-                    }
-                }).messages.map((el) =>{
+                <div className="messages-window">
+                    {this.props.contacts.find((el) => {
+                        if(el.id === this.props.whichContact){
+                            return el;
+                        }
+                        }).messages.map((el) =>{
                     if(el.from === "Me"){
                         return(
                             <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} isPhoto={false} date={new Date(el.date).toDateString()}/>
@@ -80,8 +80,8 @@ class MessagesFunc extends Component{
                         }).photo} isPhoto={true} date={new Date(el.date).toDateString()}/>
                     )
                 })}
-            </div>
-            <Input getMessage={this.getMessage} saveMessage={this.saveMessage} value={this.state.newMessage}/>
+                </div>
+                <Input getMessage={this.getMessage} saveMessage={this.saveMessage} value={this.state.newMessage}/>
            </div>
         )
     }

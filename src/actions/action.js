@@ -5,18 +5,18 @@ export const search = (input) => ({
   input: input,
   
   })
-  export const getContact = (id) => ({
+export const getContact = (id) => ({
     type: "GET_ID",
     id: id,
     
   })
-    export const save = (msg, whichContact, date) => ({
+export const save = (msg, whichContact, date) => ({
       type: "SAVE_MESSAGE",
       message: msg,
       which: whichContact,
       date: date,
     })
-    export const saveResponse = (msg, whichContact, date) => ({
+export const saveResponse = (msg, whichContact, date) => ({
       type: "SAVE_RESPONSE",
       message: msg,
       which: whichContact,

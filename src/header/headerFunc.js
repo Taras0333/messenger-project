@@ -22,10 +22,8 @@ const mapState = (state) => {
 
     render(){
         return(
-       <HeaderView search = {this.searchPerson}/>
-            
-            
-        )
+       <HeaderView search = {this.searchPerson}/> 
+    )
     }
 }
 export const Header = connect(mapState, mapDispatch)(HeaderFunc);

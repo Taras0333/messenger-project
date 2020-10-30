@@ -8,13 +8,13 @@ export const Contact = (props)=> {
             <div className="img-wrapper">
                 <img className="avatar" src={props.photo} alt="user icon"/>
                 <img className="check" src={Check} alt="check icon"/>
-              </div>
+            </div>
             <div className="content-wrapper">
                 <span className="name">{props.name}</span>
                 <span className="message">{props.message}</span>
             </div>
             <div className="date-wrapper">
-    <span className="date">{props.date}</span>
+                <span className="date">{props.date}</span>
             </div>
         </div>
     )
