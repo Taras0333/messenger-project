@@ -7,7 +7,6 @@ import {Messages} from "./messagesBar/contacts/messages";
 import {Header} from "./header/headerFunc";
 
 function App() {
-  
   return (
     <Provider store={store}>
       <div className="app-container">
@@ -21,8 +20,6 @@ function App() {
       
       </div>
     </Provider>
-   
   );
 }
-
 export default App;

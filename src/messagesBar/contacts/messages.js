@@ -11,7 +11,7 @@ import axios from 'axios';
 const mapState = (state) => {
     return state;
   }
-  const mapDispatch = {
+const mapDispatch = {
     save,
     saveResponse,
 }
@@ -69,7 +69,8 @@ class MessagesFunc extends Component{
                         }).messages.map((el) =>{
                     if(el.from === "Me"){
                         return(
-                            <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} isPhoto={false} date={el.date.toLocaleDateString("en") + ' ' + el.date.toLocaleTimeString("en")}/>
+                            <Message message={el.msg} stylesMessage={{backgroundColor: "rgb(214, 214, 214)", marginLeft: "auto", color: "#444040"}} 
+                            isPhoto={false} date={el.date.toLocaleDateString("en") + ' ' + el.date.toLocaleTimeString("en")}/>
                         )
                     }
                     return(

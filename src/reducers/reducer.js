@@ -163,8 +163,6 @@ const initialStore = {
     
 }
 
-
-
 const reducer = (store = initialStore, action) => {
 switch(action.type){
     case "SEARCH_PERSON": {

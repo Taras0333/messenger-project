@@ -3,7 +3,6 @@ import React from "react";
 export const search = (input) => ({
   type: "SEARCH_PERSON",
   input: input,
-  
   })
 export const getContact = (id) => ({
     type: "GET_ID",
@@ -16,7 +15,7 @@ export const save = (msg, whichContact, date) => ({
       which: whichContact,
       date: date,
     })
-export const saveResponse = (msg, whichContact, date) => ({
+export const saveResponse = (msg, whichContact, date, isActive) => ({
       type: "SAVE_RESPONSE",
       message: msg,
       which: whichContact,
