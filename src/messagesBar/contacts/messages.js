@@ -26,6 +26,12 @@ class MessagesFunc extends Component{
             newMessage: e.target.value
         })
     }
+    keyDown = (e) => {
+        if(e.key === 'Enter'){
+            this.saveMessage();
+        }
+        
+    }
 
     saveMessage = () =>{
         this.props.save(this.state.newMessage, this.props.whichContact, new Date());
@@ -82,7 +88,7 @@ class MessagesFunc extends Component{
                     )
                 })}
                 </div>
-                <Input getMessage={this.getMessage} saveMessage={this.saveMessage} value={this.state.newMessage}/>
+                <Input getMessage={this.getMessage} saveMessage={this.saveMessage} value={this.state.newMessage} keyDown={this.keyDown}/>
            </div>
         )
     }

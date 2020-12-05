@@ -6,7 +6,7 @@ export const Input = (props) => {
         <div className="input-container">
             <div className="input-wrapper">
                 <input className="message-input" type="message" value={props.value} placeholder="Type your message" 
-                onChange={props.getMessage} />
+                onChange={props.getMessage} onKeyDown={props.keyDown}/>
                 <button className="sent-btn" onClick={props.saveMessage}></button>
             </div>
         </div>

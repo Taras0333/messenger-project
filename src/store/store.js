@@ -1,7 +1,8 @@
-import { createStore } from 'redux'
+
 import reducer from '../reducers/reducer';
 import {loadState, saveState} from "./localStorage";
 import throttle from 'lodash.throttle';
+import {createStore} from 'redux';
 
 const persistedState = loadState();
 
